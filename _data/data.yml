@@ -40,10 +40,10 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      This is Zhengqiang Yin (银正强), a machine learning engineer at ByteDance AML 
-      (Applied Machine Learning) team. Before that, he worked at Microsoft and iQiyi as 
-      an intern. His areas of interest include natural language processing, MLOps, and 
-      distributed systems.
+      I'm Zhengqiang Yin (银正强), a machine learning engineer on ByteDance's AML
+      (Applied Machine Learning) team. I work on machine learning platforms,
+      training and inference acceleration, and domain-specific large language models.
+      My interests include natural language processing, MLOps, and distributed systems.
 education:
     - degree: MSc in Computer Science
       university: University of Electronic Science and Technology of China

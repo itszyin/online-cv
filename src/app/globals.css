@@ -482,6 +482,45 @@ h3 {
     text-decoration: none;
   }
 }
+/* Screen reading uses larger type; the verified A4 print scale stays independent. */
+@media screen {
+  .summary {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .entry-details {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .role,
+  .degree,
+  .period,
+  .education-details,
+  .language-list,
+  .interest-list {
+    font-size: 12px;
+  }
+  .tags > div {
+    font-size: 10px;
+  }
+  .contact-link {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .summary {
+    font-size: 13px;
+  }
+  .tagline {
+    font-size: 12px;
+  }
+  .timezone {
+    font-size: 11px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

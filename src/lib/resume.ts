@@ -67,7 +67,7 @@ export function detailLines(details: string) {
 
 // Tags repeat terms explicitly present in each entry; they do not add skills.
 export function technicalTags(details: string) {
-  return ["AML", "SaaS", "Bing", "Transformer", "BERT", "GPT"].filter((term) =>
+  return ["SaaS", "Transformer", "BERT", "GPT"].filter((term) =>
     details.includes(term),
   );
 }
