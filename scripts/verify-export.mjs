@@ -10,9 +10,11 @@ for (const path of ['out/index.html', 'out/print/index.html']) {
   const expected = [data.sidebar.name, data.sidebar.tagline, data.sidebar.timezone, data['career-profile'].summary,
     ...data.education.flatMap((x) => [x.degree, x.university, x.time, x.details].filter(Boolean)),
     ...data.experiences.flatMap((x) => [x.role, x.company, x.time, ...x.details.trim().split('\n').map((line) => line.replace(/^\s*-\s*/, ''))]),
+    ...(data.credentials || []).flatMap((x) => [x.title, x.issuer, x.issued]),
+    ...(data.affiliations || []).flatMap((x) => [x.organization, x.role, x.time]),
     ...data.sidebar.languages.flatMap((x) => [x.idiom, x.level]), ...data.sidebar.interests.map((x) => x.item)];
   for (const item of expected) assert.ok(text.includes(normalize(item)), `${path}: missing ${item}`);
-  for (const href of [`mailto:${data.sidebar.email}`, `http://${data.sidebar.website}`, `https://github.com/${data.sidebar.github}`, `https://linkedin.com/in/${data.sidebar.linkedin}`]) assert.ok($(`a[href="${href}"]`).length, `Missing link ${href}`);
+  for (const href of [`mailto:${data.sidebar.email}`, `http://${data.sidebar.website}`, `https://github.com/${data.sidebar.github}`, `https://linkedin.com/in/${data.sidebar.linkedin}`, ...(data.credentials || []).map((x) => x.link)]) assert.ok($(`a[href="${href}"]`).length, `Missing link ${href}`);
   assert.equal($('h1').length, 1);
   assert.equal($('link[rel="canonical"]').attr('href'), 'https://zqyin.com/');
   assert.equal($('a[href*="github.com/Codle"]').length, 0);

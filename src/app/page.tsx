@@ -127,6 +127,42 @@ export default function ResumePage() {
             </div>
           </Section>
 
+          {resume.affiliations?.length ? (
+            <Section aria-labelledby="affiliations-title">
+              <h2 id="affiliations-title">Research Affiliation</h2>
+              {resume.affiliations.map((item) => (
+                <article className="resume-entry" key={item.organization}>
+                  <h3>{item.organization}</h3>
+                  <p className="degree">
+                    {item.role} · {item.time}
+                  </p>
+                </article>
+              ))}
+            </Section>
+          ) : null}
+
+          {resume.credentials?.length ? (
+            <Section aria-labelledby="credentials-title">
+              <h2 id="credentials-title">Credentials</h2>
+              <div className="credential-list">
+                {resume.credentials.map((item) => (
+                  <article className="resume-entry" key={item.link}>
+                    <div className="entry-heading">
+                      <h3>
+                        <a className="credential-link" href={item.link}>
+                          {item.title}
+                          <span aria-hidden="true"> ↗</span>
+                        </a>
+                      </h3>
+                      <span className="period">{item.issued}</span>
+                    </div>
+                    <p className="degree">{item.issuer}</p>
+                  </article>
+                ))}
+              </div>
+            </Section>
+          ) : null}
+
           <div className="personal-sections">
             <Section aria-labelledby="languages-title">
               <h2 id="languages-title">Languages</h2>

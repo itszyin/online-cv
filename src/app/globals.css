@@ -311,7 +311,17 @@ h3 {
 }
 .language-list li {
   display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 5px;
+}
+.credential-list {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+}
+.credential-link:hover {
+  text-decoration: underline;
 }
 .muted {
   color: #71717a;
@@ -412,7 +422,7 @@ h3 {
     display: none !important;
   }
   .resume-content {
-    gap: 17px;
+    gap: 12px;
   }
   .resume-header {
     grid-template-columns: minmax(0, 1fr) 76px;
@@ -449,7 +459,7 @@ h3 {
     line-height: 1.65;
   }
   .entries {
-    gap: 13px;
+    gap: 10px;
   }
   .entry-details {
     font-size: 9.5px;
@@ -476,7 +486,15 @@ h3 {
     font-size: 8px;
   }
   .personal-sections {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+  }
+  .language-list li {
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 0;
+  }
+  .credential-list {
+    gap: 6px;
   }
   a {
     text-decoration: none;
