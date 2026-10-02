@@ -1,67 +1,43 @@
-<a href="https://jekyll-themes.com">
-<img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+# Zhengqiang Yin — résumé
 
-# Orbit
-> This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/).
-> Visit her [website](http://themes.3rdwavemedia.com/) for more themes.
+A static, print-friendly adaptation of [Minimalist CV](https://github.com/BartoszJarocki/cv), served at **https://zqyin.com/**. Built with Next.js, React, Geist and Tailwind. No runtime server is required.
 
-I have made this into a Jekyll Theme. Checkout the live demo [here](https://online-cv.webjeda.com).
+## Content
 
-<table>
-  <tr>
-    <th>Desktop</th>
-    <th>Mobile</th>
-  </tr>
-  <tr>
-    <td>
-        <img src="https://online-cv.webjeda.com/assets/images/desktop.png?raw=true" width="600"/>
-    </td>
-    <td>
-        <img src="https://online-cv.webjeda.com/assets/images/mobile.png?raw=true" width="250"/>
-    </td>
-  </tr>
-</table>
+Edit **`_data/data.yml`**. The original factual résumé remains the single source of truth and is read at build time by `src/lib/resume.ts`. Commented example skills, projects and publications are not displayed. Topic badges repeat terms already present in each role; they do not introduce new qualifications. The original portrait is retained.
 
-## Installation
+The UI preserves the original English text, Chinese name in the profile, dates, roles, bullets, education details, languages, interests and contact destinations. The corrected GitHub account is `itszyin`. Metadata and canonical URLs refer to zqyin.com, not the separate yinzq.me site. No other site is changed.
 
-* [Fork](https://github.com/sharu725/online-cv/fork) the repository
-* Go to settings and set master branch as Github Pages source.
-* Your new site should be ready at `https://<username>.github.io/online-cv/`
-* Printable version of the site can be found at `https://<username>.github.io/online-cv/print`. Use a third party link https://pdflayer.com/, https://www.web2pdfconvert.com/ etc to get the printable PDF.
+## Local development and checks
 
-Change all the details from one place: ``_data/data.yml``
-
-## To preview/edit localy with docker
+Use Node.js 22 or newer:
 
 ```sh
-docker-compose up
+npm ci
+npm run dev
+npm run lint
+npm run typecheck
+npm run build
+npm test
+npm run preview
 ```
 
-*docker-compose.yml* file is used to create a container that is reachable under http://localhost:4000.
-Changes *_data/data.yml* will be visible after a while.
+Production preview: http://127.0.0.1:3000. `npm run build` writes the complete static site to `out/`. `npm test` checks both the main and `/print/` pages for all source résumé content, contact links, assets and domain files. The Print / Save PDF button opens the browser's print dialog; use A4 and disable browser headers/footers. `/print/` is retained as a bookmarkable alias using the same print stylesheet.
 
-## Skins
+## GitHub Pages migration — requires publication approval
 
-There are 6 color schemes available:
+The existing site uses legacy Jekyll publication from `master` at `/`. This local migration does **not** change that setting.
 
-| Blue | Turquoise | Green |
-|---------|---------|---------|
-| <img src="https://online-cv.webjeda.com/assets/images/blue.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/turquoise.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/green.jpg" width="300"/> |
+When publication is approved:
 
-| Berry | Orange | Ceramic |
-|---------|---------|---------|
-| <img src="https://online-cv.webjeda.com/assets/images/berry.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/orange.jpg" width="300"/> | <img src="https://online-cv.webjeda.com/assets/images/ceramic.jpg" width="300"/> |
+1. Review and merge the redesign through a PR.
+2. Coordinate the release with Settings → Pages → Build and deployment → Source: **GitHub Actions**. Do not expect the old branch/Jekyll builder to compile Next.js; switch the source before releasing the new workflow.
+3. Keep the existing custom domain **zqyin.com** and HTTPS settings. Both root `CNAME` and exported `public/CNAME` retain it.
+4. Run the `Build and deploy résumé` workflow on `master` if necessary. It installs locked dependencies, lints, typechecks, builds, tests the static export and deploys only from `master`. PRs build/test but cannot deploy.
+5. Verify the successful Pages deployment and live site, including `/print/` and the GitHub contact link.
 
-## Credits
+`public/.nojekyll` keeps the exported `_next` assets intact. The repository's legacy Jekyll files and assets remain for rollback/history but are not used or shipped by the new build, except the canonical YAML and copied portrait. A rollback requires restoring the previous release and the matching Pages source; do not mix the two build systems.
 
-Thanks to [Nelson Estevão](https://github.com/nelsonmestevao) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=nelsonmestevao).
+## Upstream and license
 
-Thanks to [t-h-e(sfrost)](https://github.com/t-h-e) for all the [contributions](https://github.com/sharu725/online-cv/commits?author=t-h-e).
-
-Check out for more themes: [**Jekyll Themes**](http://jekyll-themes.com).
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=sharu725/online-cv&type=Date)](https://star-history.com/#sharu725/online-cv&Date)
-
+Adapted from Bartosz Jarocki's Minimalist CV at commit `b9c9c2bacf539d6bbab13714fa1c39a1afd0ad08`. Reused its section/card/badge components, social icons, utilities, font setup, Tailwind theme and base CSS, adapting the page to the existing résumé data, static hosting and responsive/print layout. The MIT notice is retained in `LICENSE.minimalist-cv` and in the exported site. Existing third-party licenses remain with legacy assets. No upstream sample résumé facts, analytics or Vercel-specific services are included.
