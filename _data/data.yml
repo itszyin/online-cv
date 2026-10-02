@@ -41,8 +41,8 @@ career-profile:
     title: Profile
     summary: |
       I'm Zhengqiang Yin (银正强), a machine learning engineer on ByteDance's AML
-      (Applied Machine Learning) team. I work on machine learning platforms,
-      training and inference acceleration, and domain-specific large language models.
+      (Applied Machine Learning) team. I work on inference systems for
+      火山方舟 / BytePlus ModelArk, with a focus on model inference acceleration.
       My interests include natural language processing, MLOps, and distributed systems.
 education:
     - degree: MSc in Computer Science
@@ -59,9 +59,9 @@ experiences:
       company: ByteDance, Beijing
       context: Part of the AML (Applied Machine Learning) team.
       details: |
-        - Develop machine learning platforms supporting model training and inference.
-        - Research methods to accelerate deep learning training and inference.
-        - Research domain-specific large language models.
+        - Develop inference systems for 火山方舟 / BytePlus ModelArk.
+        - Research methods to accelerate model inference.
+        - Earlier work included machine learning platforms, training acceleration, and domain-specific large language models.
     - role: Software Engineer Intern
       time: 2020.06 - 2020.09
       company: Microsoft, Remote
