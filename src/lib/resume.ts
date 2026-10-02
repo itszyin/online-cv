@@ -16,13 +16,6 @@ type Resume = {
     interests: { item: string; link?: string }[];
   };
   "career-profile": { title: string; summary: string };
-  credentials?: {
-    title: string;
-    issuer: string;
-    issued: string;
-    link: string;
-  }[];
-  affiliations?: { organization: string; role: string; time: string }[];
   experiences: {
     role: string;
     time: string;

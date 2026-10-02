@@ -315,14 +315,6 @@ h3 {
   gap: 0;
   margin-bottom: 5px;
 }
-.credential-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.credential-link:hover {
-  text-decoration: underline;
-}
 .muted {
   color: #71717a;
 }
@@ -492,9 +484,6 @@ h3 {
     flex-direction: row;
     gap: 8px;
     margin-bottom: 0;
-  }
-  .credential-list {
-    gap: 6px;
   }
   a {
     text-decoration: none;
