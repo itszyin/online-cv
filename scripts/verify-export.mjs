@@ -9,7 +9,7 @@ for (const path of ['out/index.html', 'out/print/index.html']) {
   const text = normalize($('main').text());
   const expected = [data.sidebar.name, data.sidebar.tagline, data.sidebar.timezone, data['career-profile'].summary,
     ...data.education.flatMap((x) => [x.degree, x.university, x.time, x.details].filter(Boolean)),
-    ...data.experiences.flatMap((x) => [x.role, x.company, x.time, ...x.details.trim().split('\n').map((line) => line.replace(/^\s*-\s*/, ''))]),
+    ...data.experiences.flatMap((x) => [x.role, x.company, x.time, x.context, ...x.details.trim().split('\n').map((line) => line.replace(/^\s*-\s*/, ''))]),
     ...data.sidebar.languages.flatMap((x) => [x.idiom, x.level]), ...data.sidebar.interests.map((x) => x.item)];
   for (const item of expected) assert.ok(text.includes(normalize(item)), `${path}: missing ${item}`);
   for (const href of [`mailto:${data.sidebar.email}`, `http://${data.sidebar.website}`, `https://github.com/${data.sidebar.github}`, `https://linkedin.com/in/${data.sidebar.linkedin}`]) assert.ok($(`a[href="${href}"]`).length, `Missing link ${href}`);

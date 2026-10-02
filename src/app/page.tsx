@@ -3,10 +3,9 @@ import Image from "next/image";
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { LinkedInIcon } from "@/components/icons/linkedin-icon";
 import { PrintButton } from "@/components/print-button";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
-import { contacts, detailLines, resume, technicalTags } from "@/lib/resume";
+import { contacts, detailLines, resume } from "@/lib/resume";
 
 const icons = [Mail, Globe, GitHubIcon, LinkedInIcon];
 
@@ -85,18 +84,10 @@ export default function ResumePage() {
                         <h3>{work.company}</h3>
                         <span className="period">{work.time}</span>
                       </div>
-                      <div className="role-row">
-                        <p className="role">{work.role}</p>
-                        <div className="tags">
-                          {technicalTags(work.details).map((tag) => (
-                            <Badge variant="secondary" key={tag}>
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
+                      <p className="role">{work.role}</p>
                     </CardHeader>
                     <CardContent className="entry-details">
+                      <p className="work-context">{work.context}</p>
                       <ul>
                         {detailLines(work.details).map((line) => (
                           <li key={line}>{line}</li>

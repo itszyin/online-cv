@@ -57,27 +57,25 @@ experiences:
     - role: Machine Learning Engineer
       time: 2020.12 - Present
       company: ByteDance, Beijing
+      context: Part of the AML (Applied Machine Learning) team.
       details: |
-        - AML (Applied Machine Learning) Team at Data.
-        - Developing the machine learning platform on SaaS.
-        - Researching on accelerating deep learning training and inference.
-        - Researching on the domain-specific large language model.
+        - Develop machine learning platforms supporting model training and inference.
+        - Research methods to accelerate deep learning training and inference.
+        - Research domain-specific large language models.
     - role: Software Engineer Intern
       time: 2020.06 - 2020.09
       company: Microsoft, Remote
+      context: Worked on search freshness with Bing's Fresh Core team.
       details: |
-        - Fresh Core Team at Bing
-        - Developed inner utils for visual debugging.
-        - Researched mining fresh queries from daily logs.
-        - Researched training re-rank model based on the fresh labels.
+        - Built internal tools for visual debugging.
+        - Investigated mining fresh queries from daily logs and training reranking models using freshness labels.
     - role: Machine Learning Engineer Intern
       time: 2019.12 - 2020.03
       company: iQIYI, Chengdu
+      context: Worked on review generation for iQIYI PaoPao with the Qiwen Tag team at IIG.
       details: |
-        - Qiwen Tag Team at IIG.
-        - Researched generating reviews in iQIYI PaoPao.
-        - Compared Transformer, BERT, GPT, etc. models for text generating tasks.
-        - Deployed the trained model which service for operation staff.
+        - Evaluated neural language models for automated review generation.
+        - Deployed a trained text generation model for use by the operations team.
 # projects:
 #     title: Projects
 #     intro: >

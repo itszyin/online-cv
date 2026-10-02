@@ -20,6 +20,7 @@ type Resume = {
     role: string;
     time: string;
     company: string;
+    context: string;
     details: string;
   }[];
   education: {
@@ -63,11 +64,4 @@ export function detailLines(details: string) {
     .split("\n")
     .map((line) => line.replace(/^\s*-\s*/, "").trim())
     .filter(Boolean);
-}
-
-// Tags repeat terms explicitly present in each entry; they do not add skills.
-export function technicalTags(details: string) {
-  return ["SaaS", "Transformer", "BERT", "GPT"].filter((term) =>
-    details.includes(term),
-  );
 }
