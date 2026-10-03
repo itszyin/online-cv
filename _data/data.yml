@@ -8,7 +8,7 @@ sidebar:
 
     # Profile information
     name: Zhengqiang Yin
-    tagline: Machine Learning Engineer
+    tagline: Senior Machine Learning Engineer
     avatar: profile_yzq.jpeg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -52,7 +52,7 @@ education:
       university: Southwest Petroleum University
       time: 2014 - 2018
 experiences:
-    - role: Machine Learning Engineer
+    - role: Senior Machine Learning Engineer
       time: 2020.12 - Present
       company: ByteDance, Beijing
       context: Part of the AML (Applied Machine Learning) team.
@@ -70,7 +70,7 @@ experiences:
     - role: Machine Learning Engineer Intern
       time: 2019.12 - 2020.03
       company: iQIYI, Chengdu
-      context: Worked with the Qiwen Tag team at IIG on automated reviews for iQIYI PaoPao.
+      context: Worked on automated review generation for iQIYI PaoPao with the Qiwen Tag team at IIG.
       details: |
         - Compared neural language models for review generation.
         - Deployed a trained review generation model for the operations team.
