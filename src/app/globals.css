@@ -528,3 +528,17 @@ h3 {
     transition: none !important;
   }
 }
+
+.product-link {
+  text-decoration: underline;
+  text-decoration-color: #a1a1aa;
+  text-underline-offset: 3px;
+}
+.product-link:hover {
+  text-decoration-color: currentColor;
+}
+@media print {
+  .product-link {
+    text-decoration: none;
+  }
+}

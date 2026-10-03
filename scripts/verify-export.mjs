@@ -13,6 +13,13 @@ for (const path of ['out/index.html', 'out/print/index.html']) {
     ...data.sidebar.languages.flatMap((x) => [x.idiom, x.level]), ...data.sidebar.interests.map((x) => x.item)];
   for (const item of expected) assert.ok(text.includes(normalize(item)), `${path}: missing ${item}`);
   for (const href of [`mailto:${data.sidebar.email}`, `http://${data.sidebar.website}`, `https://github.com/${data.sidebar.github}`, `https://linkedin.com/in/${data.sidebar.linkedin}`]) assert.ok($(`a[href="${href}"]`).length, `Missing link ${href}`);
+  for (const [label, href] of [['火山方舟', 'https://www.volcengine.com/product/ark'], ['BytePlus ModelArk', 'https://www.byteplus.com/en/product/modelark']]) {
+    for (const selector of ['section[aria-labelledby="profile-title"]', 'section[aria-labelledby="experience-title"]']) {
+      const link = $(selector).find(`a[href="${href}"]`);
+      assert.equal(link.length, 1, `${path}: missing product link in ${selector}`);
+      assert.equal(link.text(), label);
+    }
+  }
   assert.equal($('h1').length, 1);
   assert.equal($('link[rel="canonical"]').attr('href'), 'https://zqyin.com/');
   assert.equal($('a[href*="github.com/Codle"]').length, 0);

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { LinkedInIcon } from "@/components/icons/linkedin-icon";
 import { PrintButton } from "@/components/print-button";
+import { ProductLinks } from "@/components/product-links";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { contacts, detailLines, resume } from "@/lib/resume";
@@ -67,7 +68,9 @@ export default function ResumePage() {
 
           <Section aria-labelledby="profile-title">
             <h2 id="profile-title">{resume["career-profile"].title}</h2>
-            <p className="summary">{resume["career-profile"].summary.trim()}</p>
+            <p className="summary">
+              <ProductLinks text={resume["career-profile"].summary.trim()} />
+            </p>
           </Section>
 
           <Section aria-labelledby="experience-title">
@@ -90,7 +93,9 @@ export default function ResumePage() {
                       <p className="work-context">{work.context}</p>
                       <ul>
                         {detailLines(work.details).map((line) => (
-                          <li key={line}>{line}</li>
+                          <li key={line}>
+                            <ProductLinks text={line} />
+                          </li>
                         ))}
                       </ul>
                     </CardContent>
