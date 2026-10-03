@@ -1,4 +1,4 @@
-import { Clock3, Globe, Mail } from "lucide-react";
+import { Clock3, Mail } from "lucide-react";
 import Image from "next/image";
 import { GitHubIcon } from "@/components/icons/github-icon";
 import { LinkedInIcon } from "@/components/icons/linkedin-icon";
@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { contacts, detailLines, resume } from "@/lib/resume";
 
-const icons = [Mail, Globe, GitHubIcon, LinkedInIcon];
+const icons = [Mail, GitHubIcon, LinkedInIcon];
 
 export default function ResumePage() {
   const { sidebar, experiences, education } = resume;
