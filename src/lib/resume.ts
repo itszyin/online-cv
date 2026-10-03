@@ -9,7 +9,6 @@ type Resume = {
     avatar: string;
     email: string;
     timezone: string;
-    website: string;
     linkedin: string;
     github: string;
     languages: { idiom: string; level: string }[];
@@ -41,11 +40,6 @@ export const contacts = [
     name: "Email",
     label: resume.sidebar.email,
     href: `mailto:${resume.sidebar.email}`,
-  },
-  {
-    name: "Website",
-    label: resume.sidebar.website,
-    href: `http://${resume.sidebar.website}`,
   },
   {
     name: "GitHub",
