@@ -42,6 +42,11 @@ career-profile:
     summary: |
       I work on large-scale LLM inference systems for 火山方舟 / BytePlus ModelArk,
       focusing on distributed serving, inference performance, and GPU efficiency.
+skills:
+    - LLM Inference
+    - Distributed Serving
+    - Performance Optimization
+    - GPU Resource Efficiency
 education:
     - degree: MSc in Computer Science
       university: University of Electronic Science and Technology of China

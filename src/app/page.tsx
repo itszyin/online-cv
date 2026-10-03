@@ -100,6 +100,15 @@ export default function ResumePage() {
             </div>
           </Section>
 
+          <Section aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <ul className="skills-list">
+              {resume.skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </Section>
+
           <Section aria-labelledby="education-title">
             <h2 id="education-title">Education</h2>
             <div className="entries education-entries">

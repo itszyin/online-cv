@@ -7,7 +7,7 @@ const normalize = (text) => text.replace(/\s+/g, ' ').trim();
 for (const path of ['out/index.html', 'out/print/index.html']) {
   const $ = load(readFileSync(path, 'utf8'));
   const text = normalize($('main').text());
-  const expected = [data.sidebar.name, data.sidebar.tagline, data.sidebar.timezone, data['career-profile'].summary,
+  const expected = [...data.skills, data.sidebar.name, data.sidebar.tagline, data.sidebar.timezone, data['career-profile'].summary,
     ...data.education.flatMap((x) => [x.degree, x.university, x.time, x.details].filter(Boolean)),
     ...data.experiences.flatMap((x) => [x.role, x.company, x.time, x.context, ...x.details.trim().split('\n').map((line) => line.replace(/^\s*-\s*/, ''))]),
     ...data.sidebar.languages.flatMap((x) => [x.idiom, x.level]), ...data.sidebar.interests.map((x) => x.item)];

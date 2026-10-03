@@ -16,6 +16,7 @@ type Resume = {
     interests: { item: string; link?: string }[];
   };
   "career-profile": { title: string; summary: string };
+  skills: string[];
   experiences: {
     role: string;
     time: string;
