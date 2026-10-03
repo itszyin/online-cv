@@ -8,7 +8,7 @@ sidebar:
 
     # Profile information
     name: Zhengqiang Yin
-    tagline: Machine Learning Engineer
+    tagline: Senior Machine Learning Engineer
     avatar: profile_yzq.jpeg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -28,10 +28,10 @@ sidebar:
 
     languages:
       - idiom: Chinese
-        level: Native
+        level: Native or bilingual proficiency
 
       - idiom: English
-        level: Limited
+        level: Limited working proficiency
 
     interests:
       - item: Cooking
@@ -40,44 +40,45 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      This is Zhengqiang Yin (银正强), a machine learning engineer at ByteDance AML 
-      (Applied Machine Learning) team. Before that, he worked at Microsoft and iQiyi as 
-      an intern. His areas of interest include natural language processing, MLOps, and 
-      distributed systems.
+      I work on large-scale LLM inference systems for 火山方舟 / BytePlus ModelArk,
+      focusing on distributed serving, inference performance, and GPU efficiency.
+skills:
+    - LLM Inference
+    - Distributed Serving
+    - Performance Optimization
+    - GPU Resource Efficiency
 education:
     - degree: MSc in Computer Science
       university: University of Electronic Science and Technology of China
       time: 2018 - 2021
       details: |
-        NLP, Code Search
+        Research focus: Semantic search for code snippets.
     - degree: BSc in Computer Science 
       university: Southwest Petroleum University
       time: 2014 - 2018
 experiences:
-    - role: Machine Learning Engineer
+    - role: Senior Machine Learning Engineer
       time: 2020.12 - Present
       company: ByteDance, Beijing
+      context: Part of the AML (Applied Machine Learning) team.
       details: |
-        - AML (Applied Machine Learning) Team at Data.
-        - Developing the machine learning platform on SaaS.
-        - Researching on accelerating deep learning training and inference.
-        - Researching on the domain-specific large language model.
+        - Build and optimize distributed LLM inference systems for 火山方舟 / BytePlus ModelArk, supporting ByteDance Seed and open-weight models across GPU clusters totaling over 10,000 GPUs.
+        - Previously worked on machine learning platforms, deep learning training acceleration, and domain-specific large language models.
     - role: Software Engineer Intern
       time: 2020.06 - 2020.09
       company: Microsoft, Remote
+      context: Worked on search freshness with Bing's Fresh Core team.
       details: |
-        - Fresh Core Team at Bing
-        - Developed inner utils for visual debugging.
-        - Researched mining fresh queries from daily logs.
-        - Researched training re-rank model based on the fresh labels.
+        - Built internal tools to support visual debugging of search systems.
+        - Investigated methods to identify freshness-sensitive queries in daily search logs.
+        - Explored reranking models trained with freshness labels.
     - role: Machine Learning Engineer Intern
       time: 2019.12 - 2020.03
       company: iQIYI, Chengdu
+      context: Worked on automated review generation for iQIYI PaoPao with the Qiwen Tag team at IIG.
       details: |
-        - Qiwen Tag Team at IIG.
-        - Researched generating reviews in iQIYI PaoPao.
-        - Compared Transformer, BERT, GPT, etc. models for text generating tasks.
-        - Deployed the trained model which service for operation staff.
+        - Compared neural language models for review generation.
+        - Deployed a trained review generation model for the operations team.
 # projects:
 #     title: Projects
 #     intro: >

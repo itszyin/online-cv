@@ -245,12 +245,6 @@ h3 {
   color: #71717a;
   font-variant-numeric: tabular-nums;
 }
-.role-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-}
 .role,
 .degree {
   font-family: var(--font-geist-mono), monospace;
@@ -258,22 +252,14 @@ h3 {
   line-height: 1.6;
   color: #27272a;
 }
-.tags {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-}
-.tags > div {
-  font-size: 9px;
-  padding: 1px 5px;
-  border-radius: 4px;
-  color: #52525b;
-}
 .entry-details {
   margin-top: 8px;
   font-size: 11px;
   color: #52525b;
   line-height: 1.85;
+}
+.work-context {
+  margin-bottom: 4px;
 }
 .entry-details ul {
   list-style: disc;
@@ -281,6 +267,18 @@ h3 {
 }
 .entry-details li {
   padding-left: 1px;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #52525b;
+}
+.skills-list li {
+  white-space: nowrap;
 }
 .education-entries {
   gap: 16px;
@@ -311,7 +309,9 @@ h3 {
 }
 .language-list li {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 5px;
 }
 .muted {
   color: #71717a;
@@ -412,7 +412,7 @@ h3 {
     display: none !important;
   }
   .resume-content {
-    gap: 17px;
+    gap: 12px;
   }
   .resume-header {
     grid-template-columns: minmax(0, 1fr) 76px;
@@ -449,7 +449,7 @@ h3 {
     line-height: 1.65;
   }
   .entries {
-    gap: 13px;
+    gap: 10px;
   }
   .entry-details {
     font-size: 9.5px;
@@ -472,14 +472,52 @@ h3 {
   .interest-list {
     font-size: 10px;
   }
-  .tags > div {
-    font-size: 8px;
-  }
   .personal-sections {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+  }
+  .language-list li {
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 0;
   }
   a {
     text-decoration: none;
+  }
+}
+/* Screen reading uses larger type; the verified A4 print scale stays independent. */
+@media screen {
+  .summary {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .entry-details {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .role,
+  .degree,
+  .period,
+  .education-details,
+  .language-list,
+  .interest-list {
+    font-size: 12px;
+  }
+  .contact-link {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .summary {
+    font-size: 13px;
+  }
+  .tagline {
+    font-size: 12px;
+  }
+  .timezone {
+    font-size: 11px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -488,5 +526,19 @@ h3 {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+.product-link {
+  text-decoration: underline;
+  text-decoration-color: #a1a1aa;
+  text-underline-offset: 3px;
+}
+.product-link:hover {
+  text-decoration-color: currentColor;
+}
+@media print {
+  .product-link {
+    text-decoration: none;
   }
 }
