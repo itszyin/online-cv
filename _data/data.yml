@@ -57,7 +57,7 @@ experiences:
       company: ByteDance, Beijing
       context: Part of the AML (Applied Machine Learning) team.
       details: |
-        - Build and optimize distributed LLM inference systems for 火山方舟 / BytePlus ModelArk, supporting ByteDance Seed and open-weight models across large-scale GPU clusters.
+        - Build and optimize distributed LLM inference systems for 火山方舟 / BytePlus ModelArk, supporting ByteDance Seed and open-weight models across GPU clusters totaling over 10,000 GPUs.
         - Previously worked on machine learning platforms, deep learning training acceleration, and domain-specific large language models.
     - role: Software Engineer Intern
       time: 2020.06 - 2020.09
