@@ -40,16 +40,16 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      I'm Zhengqiang Yin (银正强), a machine learning engineer on ByteDance's AML
-      (Applied Machine Learning) team. I work on inference systems for
-      火山方舟 / BytePlus ModelArk, with a focus on model inference acceleration.
-      My interests include natural language processing, MLOps, and distributed systems.
+      Machine learning engineer on ByteDance's AML (Applied Machine Learning) team,
+      developing inference systems for 火山方舟 / BytePlus ModelArk.
+      My work focuses on model inference acceleration, building on experience in
+      machine learning platforms, training acceleration, and domain-specific language models.
 education:
     - degree: MSc in Computer Science
       university: University of Electronic Science and Technology of China
       time: 2018 - 2021
       details: |
-        NLP, Code Search
+        Research focus: Semantic search for code snippets.
     - degree: BSc in Computer Science 
       university: Southwest Petroleum University
       time: 2014 - 2018
@@ -59,23 +59,23 @@ experiences:
       company: ByteDance, Beijing
       context: Part of the AML (Applied Machine Learning) team.
       details: |
-        - Develop inference systems for 火山方舟 / BytePlus ModelArk.
-        - Research methods to accelerate model inference.
-        - Earlier work included machine learning platforms, training acceleration, and domain-specific large language models.
+        - Develop inference systems for 火山方舟 / BytePlus ModelArk and investigate methods to accelerate model inference.
+        - Previously worked on machine learning platforms, deep learning training acceleration, and domain-specific large language models.
     - role: Software Engineer Intern
       time: 2020.06 - 2020.09
       company: Microsoft, Remote
       context: Worked on search freshness with Bing's Fresh Core team.
       details: |
-        - Built internal tools for visual debugging.
-        - Investigated mining fresh queries from daily logs and training reranking models using freshness labels.
+        - Built internal tools to support visual debugging of search systems.
+        - Investigated methods to identify freshness-sensitive queries in daily search logs.
+        - Explored reranking models trained with freshness labels.
     - role: Machine Learning Engineer Intern
       time: 2019.12 - 2020.03
       company: iQIYI, Chengdu
-      context: Worked on review generation for iQIYI PaoPao with the Qiwen Tag team at IIG.
+      context: Worked with the Qiwen Tag team at IIG on automated reviews for iQIYI PaoPao.
       details: |
-        - Evaluated neural language models for automated review generation.
-        - Deployed a trained text generation model for use by the operations team.
+        - Compared neural language models for review generation.
+        - Deployed a trained review generation model for the operations team.
 # projects:
 #     title: Projects
 #     intro: >
