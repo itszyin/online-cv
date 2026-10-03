@@ -5,6 +5,7 @@ import { parse } from "yaml";
 type Resume = {
   sidebar: {
     name: string;
+    alternate_name: string;
     tagline: string;
     avatar: string;
     email: string;
