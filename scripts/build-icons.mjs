@@ -1,7 +1,7 @@
-// Resize the approved v6 artwork intact: no crop, background removal or redraw.
+// Resize the approved v7 artwork intact: no crop, background removal or redraw.
 import sharp from 'sharp';
 import { writeFile } from 'node:fs/promises';
-const source = 'design/folded-blue-z-lighting-v6.png';
+const source = 'design/continuous-blue-z-v7.png';
 const sizes = [16, 32, 48, 180, 192, 512];
 const images = new Map();
 for (const size of sizes) {
