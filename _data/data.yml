@@ -66,7 +66,7 @@ experiences:
         - Contributed to distributed inference and performance optimizations, including prefill–decode disaggregation across heterogeneous hardware and persistent KV caching.
         - Contributed to inference API capabilities, including reasoning-mode support and efficient constrained decoding for function calling and JSON Schema–constrained outputs, with minimal performance overhead.
         - Previously worked on machine learning platforms, deep learning training acceleration, and domain-specific large language models.
-    - role: Software Engineer Intern
+    - role: Machine Learning Engineer Intern
       time: 2020.06 - 2020.09
       company: Microsoft, Remote
       context: Worked on search freshness with Bing's Fresh Core team.
