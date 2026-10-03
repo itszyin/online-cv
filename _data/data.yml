@@ -40,10 +40,8 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      Machine learning engineer on ByteDance's AML (Applied Machine Learning) team,
-      developing inference systems for 火山方舟 / BytePlus ModelArk.
-      My work focuses on model inference acceleration, building on experience in
-      machine learning platforms, training acceleration, and domain-specific language models.
+      I work on large-scale LLM inference systems for 火山方舟 / BytePlus ModelArk,
+      focusing on distributed serving, inference performance, and GPU efficiency.
 education:
     - degree: MSc in Computer Science
       university: University of Electronic Science and Technology of China
