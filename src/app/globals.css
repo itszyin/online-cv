@@ -542,3 +542,22 @@ h3 {
     text-decoration: none;
   }
 }
+
+.alternate-name {
+  display: inline-block;
+  margin-left: 12px;
+  color: #71717a;
+  font-family:
+    var(--font-geist-sans), "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 0.55em;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+@media screen and (max-width: 600px) {
+  .alternate-name {
+    display: block;
+    margin: 6px 0 0;
+    font-size: 14px;
+  }
+}

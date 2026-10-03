@@ -7,6 +7,7 @@ import { ProductLinks } from "@/components/product-links";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { contacts, detailLines, resume } from "@/lib/resume";
+import { profileSchema } from "@/lib/seo";
 
 const icons = [Mail, GitHubIcon, LinkedInIcon];
 
@@ -17,6 +18,9 @@ export default function ResumePage() {
       <a className="skip-link" href="#main-content">
         Skip to résumé
       </a>
+      <script type="application/ld+json">
+        {JSON.stringify(profileSchema).replace(/</g, "\\u003c")}
+      </script>
       <main id="main-content" className="resume-shell">
         <div className="page-tools">
           <span className="edition">CURRICULUM VITAE</span>
@@ -25,7 +29,12 @@ export default function ResumePage() {
         <div className="resume-content">
           <header className="resume-header">
             <div className="identity">
-              <h1>{sidebar.name}</h1>
+              <h1>
+                {sidebar.name}
+                <span className="alternate-name" lang="zh-Hans">
+                  {sidebar.alternate_name}
+                </span>
+              </h1>
               <p className="tagline">{sidebar.tagline}</p>
               <p className="timezone">
                 <Clock3 size={13} aria-hidden="true" />
