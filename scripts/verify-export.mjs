@@ -15,9 +15,10 @@ for (const path of ['out/index.html', 'out/print/index.html']) {
   for (const href of [`mailto:${data.sidebar.email}`, `https://github.com/${data.sidebar.github}`, `https://linkedin.com/in/${data.sidebar.linkedin}`]) assert.ok($(`a[href="${href}"]`).length, `Missing link ${href}`);
   for (const [label, href] of [['火山方舟', 'https://www.volcengine.com/product/ark'], ['BytePlus ModelArk', 'https://www.byteplus.com/en/product/modelark']]) {
     for (const selector of ['section[aria-labelledby="profile-title"]', 'section[aria-labelledby="experience-title"]']) {
+      const expectedLabel = label === '火山方舟' && selector.includes('profile-title') ? 'Ark' : label;
       const link = $(selector).find(`a[href="${href}"]`);
       assert.equal(link.length, 1, `${path}: missing product link in ${selector}`);
-      assert.equal(link.text(), label);
+      assert.equal(link.text(), expectedLabel);
     }
   }
   assert.ok(!readFileSync(path, 'utf8').includes('zhengqiang.yin@outlook.com'), `${path}: obsolete email remains`);

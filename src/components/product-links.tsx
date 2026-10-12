@@ -1,4 +1,5 @@
 const products = [
+  { name: "Ark", href: "https://www.volcengine.com/product/ark" },
   { name: "火山方舟", href: "https://www.volcengine.com/product/ark" },
   {
     name: "BytePlus ModelArk",
@@ -7,14 +8,16 @@ const products = [
 ];
 
 export function ProductLinks({ text }: { text: string }) {
-  return text.split(/(火山方舟|BytePlus ModelArk)/g).map((part) => {
-    const product = products.find((item) => item.name === part);
-    return product ? (
-      <a className="product-link" href={product.href} key={product.name}>
-        {product.name}
-      </a>
-    ) : (
-      part
-    );
-  });
+  return text
+    .split(/(火山方舟|BytePlus ModelArk|\bArk\b(?![’']))/g)
+    .map((part) => {
+      const product = products.find((item) => item.name === part);
+      return product ? (
+        <a className="product-link" href={product.href} key={product.name}>
+          {product.name}
+        </a>
+      ) : (
+        part
+      );
+    });
 }
