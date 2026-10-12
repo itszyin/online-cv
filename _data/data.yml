@@ -14,7 +14,7 @@ sidebar:
 
     # Sidebar links
     email: ian.zqyin@gmail.com
-    timezone: China Timezone (UTC+8)
+    timezone: San Francisco Bay Area, CA · Pacific Time
     linkedin: zhengqiang-yin
     github: itszyin
     # telegram: # add your nickname without '@' sign
@@ -40,8 +40,7 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      I work on large-scale LLM inference systems for 火山方舟 / BytePlus ModelArk,
-      focusing on distributed serving, inference performance, and GPU efficiency.
+      I build large-scale LLM inference systems for Ark and BytePlus ModelArk, focusing on distributed serving, performance, reliability, and GPU efficiency across global deployments.
 skills:
     - LLM Inference
     - Distributed Serving
@@ -59,7 +58,7 @@ education:
 experiences:
     - role: Senior Machine Learning Engineer
       time: 2020.12 - Present
-      company: ByteDance, Beijing
+      company: ByteDance, San Jose, CA
       context: Part of ByteDance’s AML team, working on LLM inference infrastructure spanning GPU clusters totaling over 10,000 GPUs.
       details: |
         - Contributed to building Ark’s LLM inference platform from inception to production as an early team member, supporting internal ByteDance workloads and external enterprise customers through 火山方舟 / BytePlus ModelArk.
