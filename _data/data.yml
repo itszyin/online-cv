@@ -59,11 +59,12 @@ experiences:
     - role: Senior Machine Learning Engineer
       time: 2020.12 - Present
       company: ByteDance, San Jose, CA
-      context: Part of ByteDance’s AML team, working on LLM inference infrastructure spanning GPU clusters totaling over 10,000 GPUs.
+      context: Part of ByteDance’s Applied Machine Learning (AML) team.
       details: |
         - Contributed to building Ark’s LLM inference platform from inception to production as an early team member, supporting internal ByteDance workloads and external enterprise customers through 火山方舟 / BytePlus ModelArk.
-        - Contributed to distributed inference and performance optimizations, including prefill–decode disaggregation across heterogeneous hardware and persistent KV caching.
-        - Contributed to inference API capabilities, including reasoning-mode support and efficient constrained decoding for function calling and JSON Schema–constrained outputs, with minimal performance overhead.
+        - Optimized LLM inference performance and GPU efficiency for a production serving platform spanning 100,000+ GPUs.
+        - Led the integration and production rollout of major foundation models, including ByteDance Seed, DeepSeek, GLM, and Kimi.
+        - Scaled the distributed inference systems behind one of China’s largest LLM serving platforms by token volume.
         - Previously worked on machine learning platforms, deep learning training acceleration, and domain-specific large language models.
     - role: Machine Learning Engineer Intern
       time: 2020.06 - 2020.09
