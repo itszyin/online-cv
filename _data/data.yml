@@ -40,7 +40,7 @@ sidebar:
 career-profile:
     title: Profile
     summary: |
-      I build large-scale LLM inference systems for Ark and BytePlus ModelArk, focusing on distributed serving, performance, reliability, and GPU efficiency across global deployments.
+      I build large-scale LLM inference systems for 火山方舟 and BytePlus ModelArk, focusing on distributed serving, performance, reliability, and GPU efficiency across global deployments.
 skills:
     - LLM Inference
     - Distributed Serving
