@@ -9,7 +9,7 @@ sidebar:
     # Profile information
     name: Zhengqiang Yin
     alternate_name: 银正强
-    tagline: Senior Machine Learning Engineer
+    tagline: Staff Machine Learning Engineer
     avatar: profile_yzq.jpeg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
@@ -56,7 +56,7 @@ education:
       university: Southwest Petroleum University
       time: 2014 - 2018
 experiences:
-    - role: Senior Machine Learning Engineer
+    - role: Staff Machine Learning Engineer
       time: 2020.12 - Present
       company: ByteDance, San Jose, CA
       context: Part of ByteDance’s Applied Machine Learning (AML) team.
